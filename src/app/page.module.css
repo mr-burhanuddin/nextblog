@@ -13,7 +13,7 @@
 
 .title {
   font-size: 42px;
-  color: #17594a;
+  color: var(--heading-color);
 }
 
 .tagline {

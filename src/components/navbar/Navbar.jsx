@@ -14,14 +14,29 @@ const Navbar = () => {
       </Link>
       <div className={style.links}>
         {NavLinks.map((link) => (
-          <Link key={link.id} href={link.url} className={style.link}>
-            {link.title}
-          </Link>
+          <>
+            {link.public && (
+              <Link key={link.id} href={link.url} className={style.link}>
+                {link.title}
+              </Link>
+            )}
+          </>
         ))}
         {session.status === "authenticated" && (
-          <button className={style.logout} onClick={signOut}>
-            Logout
-          </button>
+          <>
+            {NavLinks.map((link) => (
+              <>
+                {link.public === false && (
+                  <Link key={link.id} href={link.url} className={style.link}>
+                    {link.title}
+                  </Link>
+                )}
+              </>
+            ))}
+            <button className={style.logout} onClick={signOut}>
+              Logout
+            </button>
+          </>
         )}
       </div>
     </div>

@@ -2,14 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 25px;
+  border: 2px solid whitesmoke;
+  padding: 1.25rem 1rem;
 }
 
-.sidebar {
-  flex: 1;
-  background-color: red;
+.aside {
+  flex: 0.3;
+  border-right: 1px solid whitesmoke;
+}
+
+.aside ul {
+  list-style: none;
 }
 
 .main {
   flex: 1;
-  background-color: aqua;
+  margin: 0.75rem;
 }

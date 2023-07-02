@@ -28,7 +28,7 @@ const handler = NextAuth({
             throw new Error("User Not Found");
           }
         } catch (error) {
-          throw new Error("Some Error");
+          throw new Error("Try Again later", error);
         }
       },
     }),
